@@ -160,6 +160,13 @@ if 'References' in text[:200] and 'Aaker' in text:  # 改用具体作者名
    经常发生（如 Shostack 1984 服务蓝图 vs Surprenant 1987 服务接触）。发现第一篇
    对应不上时，立即告诉用户并提供正确引用建议。
 
+5. **注释"not bound to any page"**：`doc[pno].add_highlight_annot(rect)` 把注释
+   绑在临时 Page 对象上，下一次循环重建 `doc[pno]` 时临时对象被回收，注释随之
+   失效——保存的 PDF 里一处高亮都没有，或循环中途报
+   `FzErrorArgument: annotation not bound to any page`。
+   **解法**：先 `page = doc[pno]` 存入变量，在同一次迭代里完成 add + set_colors +
+   update。本仓库 CLI 已按此写法实现。
+
 ## 与其他 skill 的关系
 
 - 不需要联网，纯本地 PDF 处理
