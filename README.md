@@ -11,10 +11,26 @@ Trace any quote back to its exact source in the PDF — and highlight it.
 
 ![before/after preview](examples/preview.png)
 
-写文献综述时，你手上有一段引文（比如 *"customer experience is holistic in nature
-and involves cognitive, affective, emotional..."*），想回到原始 PDF 里确认它的
-定义段、关键术语到底在哪一页哪一行。手动 Ctrl+F 经常搜不到——**不是你的错，
-是 PDF 文本提取的三个经典陷阱**：
+## 为什么需要它 / Why
+
+用 AI 辅助写论文时，它插入的引用经常「看着像那么回事」：句子通顺、作者年份都对，
+但翻出原文一对——定义被转述走了样、关键结论张冠李戴、甚至整句查无出处。
+**核验 AI 给的引用是否站得住，是作者自己的责任**；而逐条人工翻 PDF，
+绝大多数人坚持不了三条就放弃了。
+
+## 经典用法 / Classic Workflow（三件套）
+
+1. **一段带引用的论文正文**——你刚让 AI 写完或润色的部分，中英文都行；
+2. **对应的参考文献 PDF**——被引文献的原文文件；
+3. 调用本 skill——它从引文中提取要害短语，在 PDF 全文中定位对应段落并标黄。
+
+对照高亮读一遍：高亮内容撑得起你的引用 → 放行；定位不到、或高亮讲的和引用
+不是一回事 → 这条引用需要换证据或改写。**判断永远由人做，工具只负责把原始
+证据从 PDF 里翻出来。**
+
+### 为什么不能只靠 Ctrl+F？
+
+因为 PDF 文本提取有三个经典陷阱——搜不到真不是你的错：
 
 | 陷阱 | 例子 | 为什么 Ctrl+F 失效 |
 |---|---|---|
