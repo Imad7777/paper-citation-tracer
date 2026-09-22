@@ -61,9 +61,6 @@ python highlight_citations.py paper.pdf --quotes-file quotes.txt --dry-run
 | `--dry-run` | 关 | 只报告命中位置，不写文件 |
 | `--verify` | 关 | 保存后把每处高亮下的文本打印出来，人工核对 |
 
-> **短语怎么选？** 用"动词 + 宾语 + 限定词"的独特短语，不要含标点/年份，
-> 不要用全文出现 30+ 次的通用词。同一概念给 2–3 个不同短语做冗余匹配。
-> See `--help` for the full option list.
 
 ## 作为 Agent Skill 使用 / Use as an Agent Skill
 
