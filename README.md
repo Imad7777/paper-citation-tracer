@@ -1,9 +1,8 @@
 # paper-citation-tracer
 
-**给论文写作用的引文溯源工具：给一段引文，自动在 PDF 原文里定位对应句子并标黄——核验"这句引文到底出不出自这篇文献"，证据摆在你眼前，判断由你做。**
+**给论文写作用的引文溯源工具：给一段引文，自动在 PDF 原文里定位对应句子并标黄——核验"这句引文到底出不出自这篇文献"。**
 Trace any quote back to its exact source in the PDF — and highlight it.
 
-> 不是查重、不是自动判真伪：是把每条引文的**原始证据**从 PDF 里翻出来摆在你面前。
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
