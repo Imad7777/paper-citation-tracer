@@ -1,7 +1,9 @@
-# pdf-citation-highlighter
+# paper-citation-tracer
 
-**给文献综述用的 PDF 引文高亮工具：给一段引文，自动在 PDF 原文里找到对应句子并标黄。**
-Highlight the exact sentences a citation comes from — directly inside the PDF.
+**给论文写作用的引文溯源工具：给一段引文，自动在 PDF 原文里定位对应句子并标黄——核验"这句引文到底出不出自这篇文献"，证据摆在你眼前，判断由你做。**
+Trace any quote back to its exact source in the PDF — and highlight it.
+
+> 不是查重、不是自动判真伪：是把每条引文的**原始证据**从 PDF 里翻出来摆在你面前。
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
@@ -76,7 +78,7 @@ Claude Code 等 agent-skill 格式）：把整个文件夹放进你的 skills �
 ## 目录结构 / Repository Layout
 
 ```
-pdf-citation-highlighter/
+paper-citation-tracer/
 ├── SKILL.md                  # agent skill 定义（工作流 + 已知陷阱，核心文档）
 ├── highlight_citations.py    # 独立 CLI（无 agent 环境也能用）
 ├── requirements.txt

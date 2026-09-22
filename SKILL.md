@@ -1,17 +1,18 @@
 ---
-name: pdf-citation-highlighter
+name: paper-citation-tracer
 description: |
-  为学术文献综述任务，定位 PDF 全文中与用户引文（中文段落）对应的英文原文段落，
-  用 PyMuPDF 添加高亮注释（黄色），输出标注后的 PDF 文件。
+  为学术写作与文献综述任务，定位 PDF 全文中与用户引文（中文或英文段落）对应的原文段落，
+  用 PyMuPDF 添加高亮注释（黄色），输出标注后的 PDF 文件——用于核验引文出处是否属实。
   适用于：用户在论文/综述写作中提供"引文原文"和"参考文献 PDF 路径"，要求把 PDF 中
-  对应的定义段、关键术语、引用位置都标黄，方便后续写文献综述时直接对照原文。
-  触发词：高亮文献、高亮 PDF、文献段落标注、标黄引文、PDF 标注、
-  highlight citations in PDF、mark up PDF with quotes、cite-source highlight。
+  对应的定义段、关键术语、引用位置都标黄，方便直接对照原文核验引用。
+  触发词：核验引用、引文溯源、高亮文献、高亮 PDF、文献段落标注、标黄引文、PDF 标注、
+  verify citation、trace quote to source、highlight citations in PDF、mark up PDF with quotes。
 ---
 
-# PDF Citation Highlighter
+# Paper Citation Tracer
 
-为用户的引文（中文或英文段落）在指定的 PDF 全文中找对应的原文段，并添加高亮注释。
+为用户的引文（中文或英文段落）在指定的 PDF 全文中定位原文出处，并添加高亮注释——
+把引文的原始证据翻出来，核验判断由人来做。
 
 > 本仓库同时提供独立 CLI `highlight_citations.py`：没有 agent 环境时，
 > 也可以直接在命令行完成同样的标注（见 README）。
