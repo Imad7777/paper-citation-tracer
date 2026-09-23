@@ -12,8 +12,8 @@ Trace any quote back to its exact source in the PDF — and highlight it.
 ## 为什么需要它 / Why
 
 当我们在借助 agent/AI 辅助写论文，找引用文献时，往往很难确定引用的文献是否合理，
-引用的位置是否合理，甚至产生错误引用的情况，人工核验引用的合理性耗时长，非常消耗精力。
-而自己搜索文献补充引用or定位引文的引用段落，又非常的传统且耗时
+引用的位置是否合理，甚至产生错误引用的情况，人工核验引用的合理性耗时长，
+而自己搜索文献补充引用or定位引文的引用段落，又非常的传统且耗时，
 为解决此问题，故而设计了 paper-citation-tracer。
 
 ## 经典用法 / Classic Workflow
