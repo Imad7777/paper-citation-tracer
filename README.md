@@ -13,6 +13,7 @@ Trace any quote back to its exact source in the PDF — and highlight it.
 
 当我们在借助 agent/AI 辅助写论文，找引用文献时，往往很难确定引用的文献是否合理，
 引用的位置是否合理，甚至产生错误引用的情况，人工核验引用的合理性耗时长，非常消耗精力。
+而自己搜索文献补充引用or定位引文的引用段落，又非常的传统且耗时
 为解决此问题，故而设计了 paper-citation-tracer。
 
 ## 经典用法 / Classic Workflow
@@ -44,21 +45,8 @@ produced … The best known example is Methods [30] …"
 ```
 
 agent 会自动完成：从引文中提取要害短语 → 在 PDF 全文定位标黄 → 逐条报告
-命中页码。**一次核一条引用最清楚**：一段里有 5 条引用，就把正文拆成 5 次
-分别发；不要把整段原文都当短语喂进去，否则高亮会铺满整页（工具没坏，是
-输入太宽——短语越短越独特，定位越准）。
+命中页码。**支持一次核验多篇引用 但不建议一次进行章节级的全部核验**：
 
-### 为什么不能只靠 Ctrl+F？
-
-因为 PDF 文本提取有三个经典陷阱——搜不到真不是你的错：
-
-| 陷阱 | 例子 | 为什么 Ctrl+F 失效 |
-|---|---|---|
-| 智能引号 | `customer's` 存成 `customer’s` | 字符根本不同 |
-| 连字 | `definition` 存成 `deﬁnition`（ﬁ 是一个字符） | 单字符 ≠ 双字符 |
-| 跨行断句 | `holistic in\nnature and` | 短语被换行切开 |
-
-本工具把这三个陷阱全部处理掉，并且把**匹配结果验证**也做成了流程的一部分。
 
 ---
 
@@ -127,17 +115,6 @@ paper-citation-tracer/
     └── sample_paper_highlighted.pdf  # 示例输出
 ```
 
-## 设计要点 / Design Notes
-
-- **两级匹配策略**：先用 PyMuPDF 内置 `search_for`（归一化引号/连字后）；
-  失败则退到词级重建文本的宽松匹配，把命中词映射回逐行矩形——跨行短语
-  会得到逐行高亮，而不是一个巨大方框。
-- **参考文献区自动跳过**：检测到 References/Bibliography 标题即停止扫描，
-  可用 `--keep-references` 关闭。
-- **验证内建**：`--verify` 把每处高亮下的实际文本打印出来。关键词"命中"
-  但位置错了（同名术语在别处出现）只有靠人工核验才能发现。
-- **Xref 警告不致命**：老 PDF 的 xref 表损坏时 MuPDF 会报警告，文件仍能
-  正常保存和打开。
 
 ## 已知陷阱 / Known Pitfalls
 
