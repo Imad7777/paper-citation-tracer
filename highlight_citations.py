@@ -215,8 +215,10 @@ def main(argv: list[str] | None = None) -> int:
                          "(prevents 'whole page turns yellow'); default 3")
     ap.add_argument("--color", default="yellow", type=parse_color,
                     help="yellow/green/blue/red or 'r,g,b' 0-1 (default: yellow)")
-    ap.add_argument("--opacity", type=float, default=1.0,
-                    help="annotation opacity 0-1 (default 1.0)")
+    ap.add_argument("--opacity", type=float, default=0.5,
+                    help="annotation opacity 0-1 (default 0.5; keep below 1.0 "
+                         "so glyphs never get covered in viewers without "
+                         "multiply blending)")
     ap.add_argument("--keep-references", action="store_true",
                     help="do not stop at the References/Bibliography section")
     ap.add_argument("--dry-run", action="store_true",

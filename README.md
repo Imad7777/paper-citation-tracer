@@ -93,6 +93,7 @@ python highlight_citations.py paper.pdf --quotes-file quotes.txt --dry-run
 | `--pages` | `all` | 页码范围，如 `1-8`、`3-`、`-5` |
 | `--max-n` | `3` | 每个短语最多标注次数（防止整页变黄） |
 | `--color` | `yellow` | `yellow/green/blue/red` 或 `r,g,b`（0–1） |
+| `--opacity` | `0.5` | 高亮不透明度 0–1；保持 <1.0，避免部分阅读器把高亮盖在文字上 |
 | `--keep-references` | 关 | 默认扫到 References/Bibliography 就停 |
 | `--dry-run` | 关 | 只报告命中位置，不写文件 |
 | `--verify` | 关 | 保存后把每处高亮下的文本打印出来，人工核对 |
